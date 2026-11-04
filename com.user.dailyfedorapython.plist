@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 1. Unique identifier for the job -->
+    <key>Label</key>
+    <string>com.user.dailyfedorapython</string>
+
+    <!-- 2. Execution commands: Path to python executable followed by path to script -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/python3</string>
+        <string>/Users/kelly/PycharmProjects/FedoraLatestRelease/email_on_new_release.py</string>
+    </array>
+
+    <!-- 3. Daily Schedule: Runs every day at 02:30 AM -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>2</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <!-- 4. Logging: Highly recommended to catch Python errors -->
+    <key>StandardOutPath</key>
+    <string>/tmp/com.user.dailyfedorapython.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.user.dailyfedorapython.err</string>
+</dict>
+</plist>
